@@ -1,6 +1,6 @@
 .data
 	msg1:.asciiz"\nEscreva a qtd de camisetas pequenas: "
-	msg2:.asciiz"\nEscreva a qtd de camisetas médias: "
+	msg2:.asciiz"\nEscreva a qtd de camisetas mÃ©dias: "
 	msg3:.asciiz"\nEscreva a qtd de camisetas grandes: "
 	res:.asciiz"\nValor final: R$ "
 .text
@@ -14,7 +14,7 @@ main:
 	syscall
 	mul $t0, $v0, 10
 	
-	# Leitura das camisetas médias
+	# Leitura das camisetas mÃ©dias
 	li $v0, 4
 	la $a0, msg2
 	syscall
@@ -35,7 +35,7 @@ main:
 	add $t3, $t0, $t1
 	add $t3, $t3, $t2
 	
-	# Exibição do valor
+	# ExibiÃ§Ã£o do valor
 	li $v0, 4
 	la $a0, res
 	syscall
