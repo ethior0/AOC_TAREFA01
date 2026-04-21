@@ -2,7 +2,7 @@
 	msg1:.asciiz"\nDigite a base menor: "
 	msg2:.asciiz"\nDigite a base maior: "
 	msg3:.asciiz"\nDigite a altura: "
-	res:.asciiz"\n¡rea do trapÈzio: "
+	res:.asciiz"\n√Årea do trap√©zio: "
 .text
 main:
 	# Leitura da base menor no $t0
@@ -32,7 +32,7 @@ main:
 	syscall
 	add $t2, $v0, $zero
 	
-	# C·lculo da ·rea no $t3
+	# C√°lculo da √°rea no $t3
 	add $t3, $t0, $t1
 	mul $t3, $t3, $t2
 	div $t3, $t3, 2
