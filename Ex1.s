@@ -1,38 +1,38 @@
 .data
 	msg1:.asciiz"\nDigite a largura: "
 	msg2:.asciiz"\nDigite o comprimento: "
-	res:.asciiz"\n¡rea = "
+	res:.asciiz"\n√Årea = "
 .text
 main:
-	# ExibiÁ„o da msg1
+	# Exibi√ß√£o da msg1
 	li $v0, 4
 	la $a0, msg1
 	syscall
 	
-	# Leitura da largura e atribuiÁ„o no reg. t0
+	# Leitura da largura e atribui√ß√£o no reg. t0
 	li $v0, 5
 	syscall
 	add $t0, $v0, $zero
 	
-	# ExibiÁ„o da msg2
+	# Exibi√ß√£o da msg2
 	li $v0, 4
 	la $a0, msg2
 	syscall
 	
-	# Leitura do comprimento e atribuiÁ„o no reg. t1
+	# Leitura do comprimento e atribui√ß√£o no reg. t1
 	li $v0, 5
 	syscall
 	add $t1, $v0, $zero
 	
-	# MultiplicaÁ„o da largura pelo comprimento e atribuiÁ„o no reg. t2
+	# Multiplica√ß√£o da largura pelo comprimento e atribui√ß√£o no reg. t2
 	mul $t2, $t0, $t1
 	
-	# ExibiÁ„o do res
+	# Exibi√ß√£o do res
 	li $v0, 4
 	la $a0, res
 	syscall
 	
-	# ExibiÁ„o do valor do reg. t2
+	# Exibi√ß√£o do valor do reg. t2
 	li $v0, 1
 	add $a0, $t2, $zero
 	syscall
