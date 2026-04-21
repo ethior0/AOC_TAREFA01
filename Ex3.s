@@ -2,8 +2,8 @@
 	msg1:.asciiz"\nDigite as horas trabalhadas: "
 	msg2:.asciiz"\nDigite as horas extras trabalhadas: "
 	msg3:.asciiz"\nDigite o desconto (Ex.: 25): "
-	res1:.asciiz"\nSalário bruto: R$ "
-	res2:.asciiz"\nSalário líquido: R$ "
+	res1:.asciiz"\nSalÃ¡rio bruto: R$ "
+	res2:.asciiz"\nSalÃ¡rio lÃ­quido: R$ "
 .text
 main:
 	# Leitura das horas trabalhadas no $t0
@@ -33,7 +33,7 @@ main:
 	syscall
 	add $t2, $v0, $zero
 	
-	# Calc salário bruto no $t5
+	# Calc salÃ¡rio bruto no $t5
 	mul $t3, $t0, 10
 	mul $t4, $t1, 15
 	add $t5, $t3, $t4
@@ -46,7 +46,7 @@ main:
 	add $a0, $t5, $zero
 	syscall
 	
-	# Calc salário líquido
+	# Calc salÃ¡rio lÃ­quido
 	li $t3, 100
 	sub $t2, $t3, $t2
 	
